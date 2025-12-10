@@ -6,31 +6,6 @@ Tecnologia: React Native + Expo
 
 Este projeto é uma demonstração completa das capacidades do Expo, reunindo funcionalidades de hardware, gestos complexos, mapas e persistência de dados em um único aplicativo. Foi desenvolvido com foco em código limpo, componentização e UX moderna.
 
-📂 Estrutura do Projeto
-
-Para garantir que o app funcione, organize seus arquivos desta maneira:
-
-MeuProjeto/
-├── assets/                 # Imagens e Músicas (mp3/jpg)
-│   ├── Scorpion_-_Wind_of_change_(mp3.pm).mp3
-│   ├── blocoDeGelo.jpg
-│   └── ...
-├── screens/                # Todas as telas criadas
-│   ├── Acelerometro.js     # Nível de Bolha
-│   ├── ArrastarDrag.js     # Gestos de Arrastar
-│   ├── CameraScreen.js     # Câmera e Galeria
-│   ├── GpsScreen.js        # Dados de GPS
-│   ├── ListaScreen.js      # Tarefas (AsyncStorage)
-│   ├── MapaScreen.js       # Google Maps
-│   ├── PerfilScreen.js     # Perfil com Menu
-│   ├── PinchGestureHandler.js # Zoom em Imagem
-│   ├── RotationGestureHandler.js # Rotação de Objeto
-│   ├── Som.js              # Player de Música
-│   └── WifiScreen.js       # Monitor de Rede
-├── App.js                  # Navegação Principal (Drawer/Stack)
-├── app.json                # Configurações do Expo
-└── package.json            # Dependências
-
 
 ✨ Funcionalidades (Telas)
 
