@@ -1,156 +1,223 @@
 📱 Super App Expo - Projeto Integrado
 
-Status: Em Desenvolvimento 🚧
+Este projeto é uma demonstração robusta das capacidades do Expo SDK, reunindo funcionalidades de hardware (sensores, câmera, GPS), gestos complexos, mapas e persistência de dados em um único aplicativo modular.
 
-Tecnologia: React Native + Expo
+📑 Tabela de Conteúdos
 
-Este projeto é uma demonstração completa das capacidades do Expo, reunindo funcionalidades de hardware, gestos complexos, mapas e persistência de dados em um único aplicativo. Foi desenvolvido com foco em código limpo, componentização e UX moderna.
+Estrutura de Pastas
+
+Catálogo de Telas e Funcionalidades
+
+Dependências e Tecnologias
+
+Instalação e Execução
+
+Solução de Problemas (FAQ)
+
+📂 Estrutura de Pastas
+
+A organização do projeto segue o padrão de separação por responsabilidade.
+
+MeuProjeto/
+├── assets/                 # Recursos estáticos
+│   ├── Scorpion_-_Wind_of_change_(mp3.pm).mp3
+│   ├── blocoDeGelo.jpg
+│   └── ...
+├── screens/                # Módulos do Aplicativo
+│   ├── Acelerometro.js     # Ferramenta de Nível
+│   ├── ArrastarDrag.js     # Lab. de Gestos (Drag)
+│   ├── CameraScreen.js     # Câmera e Galeria
+│   ├── GpsScreen.js        # Dashboard GPS
+│   ├── ListaScreen.js      # Tarefas (Persistência)
+│   ├── MapaScreen.js       # Mapas Visuais
+│   ├── PerfilScreen.js     # UI de Perfil
+│   ├── PinchGestureHandler.js # Lab. de Gestos (Zoom)
+│   ├── RotationGestureHandler.js # Lab. de Gestos (Rotação)
+│   ├── Som.js              # Music Player
+│   └── WifiScreen.js       # Monitor de Rede
+├── App.js                  # Navegação (Entry Point)
+└── app.json                # Configurações do Expo
 
 
-✨ Funcionalidades (Telas)
+📱 Catálogo de Telas e Funcionalidades
 
-O aplicativo é dividido em módulos. Aqui está o que cada arquivo faz:
+Abaixo, a relação de cada arquivo com sua funcionalidade e o que ele demonstra tecnicamente.
+
+Tela / Arquivo
+
+Categoria
+
+Descrição Funcional
+
+Acelerometro.js
 
 🛠 Ferramentas
 
-Nível de Bolha (Acelerometro.js): Usa o acelerômetro do celular para funcionar como uma ferramenta de nível de pedreiro. A bolinha fica verde quando a superfície está reta.
+Nível de bolha digital. A interface muda de cor (Verde/Vermelho) dependendo da inclinação do dispositivo.
 
-Monitor Wi-Fi (WifiScreen.js): Mostra status da conexão, SSID, IP e mantém um histórico de quedas de rede.
+WifiScreen.js
 
-Monitor GPS (GpsScreen.js): Painel estilo dashboard mostrando Latitude, Longitude, Altitude e Velocidade em tempo real.
+🛠 Ferramentas
+
+Monitor de rede em tempo real. Exibe SSID, IP e log de quedas de conexão.
+
+GpsScreen.js
+
+🛠 Ferramentas
+
+Dashboard de dados de localização: Latitude, Longitude, Altitude e Velocidade (km/h).
+
+Som.js
 
 🎵 Multimídia
 
-Music Player (Som.js): Player estilo Spotify com capa de álbum, play/pause, loop e barra de progresso. Toca música localmente.
+Player de música completo com controles de Loop, Play/Pause e barra de progresso.
 
-Câmera Pro (CameraScreen.js): Interface de câmera customizada com opção de salvar fotos na galeria do dispositivo.
+CameraScreen.js
+
+🎵 Multimídia
+
+Câmera personalizada com botão de disparo, troca de câmera (frontal/traseira) e salvamento na galeria.
+
+ListaScreen.js
 
 📝 Produtividade
 
-Lista de Tarefas (ListaScreen.js): Todo-List que salva os dados no celular (AsyncStorage). Nada é perdido ao fechar o app.
+Lista de tarefas persistente. Os dados não somem ao fechar o app (AsyncStorage).
 
-👆 Laboratório de Gestos
+MapaScreen.js
 
-Zoom (PinchGestureHandler.js): Efeito de pinça para ampliar imagens com efeito elástico estilo Instagram.
+🗺 Mapas
 
-Rotação (RotationGestureHandler.js): Gire elementos na tela usando dois dedos.
+Visualização de mapa (Google/Apple Maps) com marcador na posição atual do usuário.
 
-Arrastar (ArrastarDrag.js): Mova objetos pela tela com física e limites de borda.
+Pinch...js
 
-Toque Longo (LongPress.js): Botão que exige pressão contínua com feedback tátil (vibração).
+👆 Gestos
 
-🚀 Instalação e Configuração
+Demonstração de Zoom (Pinça) em imagens com efeito elástico ("Snap back").
 
-Siga estes passos se estiver baixando o projeto pela primeira vez ou trocou de computador.
+Rotation...js
 
-1. Instalar Dependências
+👆 Gestos
 
-Este comando instala tud0 o que é necessário (Mapas, Sensores, Gestos, etc):
+Rotação de elementos na tela utilizando dois dedos.
+
+Arrastar...js
+
+👆 Gestos
+
+Movimentação de objetos (Drag & Drop) com física e limites de tela.
+
+LongPress.js
+
+👆 Gestos
+
+Botão de pressão longa com feedback tátil (vibração/haptics).
+
+📦 Dependências e Tecnologias
+
+Principais bibliotecas utilizadas para construir as funcionalidades acima.
+
+Pacote
+
+Uso Principal
+
+expo-av
+
+Reprodução de áudio e música.
+
+expo-camera
+
+Acesso à câmera do dispositivo.
+
+expo-media-library
+
+Permissões para salvar fotos na galeria.
+
+expo-location
+
+Acesso ao GPS e permissões de localização (necessário para Wi-Fi no Android).
+
+expo-sensors
+
+Acesso ao Acelerômetro e Giroscópio.
+
+expo-haptics
+
+Feedback tátil (vibração) físico.
+
+react-native-maps
+
+Renderização de mapas nativos.
+
+async-storage
+
+Banco de dados local simples (Chave-Valor).
+
+netinfo
+
+Monitoramento de estado de rede (Online/Offline).
+
+gesture-handler
+
+Sistema avançado de toques e gestos.
+
+reanimated
+
+Sistema de animações de alta performance (60fps).
+
+🚀 Instalação e Execução
+
+1. Pré-requisitos
+
+Certifique-se de ter o Node.js instalado e o ambiente Expo configurado.
+
+2. Instalar todas as dependências
+
+Execute este comando único para garantir que todas as bibliotecas necessárias estejam presentes:
 
 npx expo install react-dom react-native-web @expo/metro-runtime react-native-gesture-handler react-native-reanimated expo-sensors expo-av @expo/vector-icons react-native-maps expo-location expo-camera expo-media-library @react-native-async-storage/async-storage @react-native-community/netinfo expo-haptics
 
 
-2. Iniciar o Projeto
+3. Rodar o Projeto
 
 npx expo start
 
 
-Pressione a para Android (Emulador ou USB).
+Android: Pressione a (Requer Emulador ou USB).
 
-Pressione w para Web (Limitado, alguns sensores não funcionam).
+Web: Pressione w (Funcionalidades de sensores/GPS são limitadas).
 
-Escaneie o QR Code com o app Expo Go no seu celular físico.
+iOS: Pressione i (Requer macOS/Simulator ou iPhone físico).
 
-❓ Solução de Problemas Comuns
+❓ Solução de Problemas (FAQ)
 
-🔴 Erro: Unable to resolve module expo-haptics (ou outro módulo)
+🔴 Erro: Unable to resolve module expo-haptics
 
-Isso significa que você esqueceu de instalar uma biblioteca nova.
-Solução: Pare o servidor (Ctrl + C) e rode o comando de instalação acima novamente.
+Causa: Biblioteca não instalada.
+Solução: Pare o servidor e rode: npx expo install expo-haptics.
 
 🔴 Erro: Invalid value for 'component' prop
 
-Geralmente acontece no App.js ao importar uma tela.
-Solução: Verifique se você está usando chaves {} incorretamente.
+Causa: Erro na importação da tela no App.js.
+Solução: Verifique se usou chaves {} incorretamente.
 
-Errado: import { Som } from './screens/Som'
+❌ Errado: import { Som } from './screens/Som'
 
-Certo: import Som from './screens/Som' (Se usar export default).
+✅ Certo: import Som from './screens/Som' (Para export default).
 
-⚠️ Aviso: Expo AV has been deprecated
+📱 GPS ou Wi-Fi não funcionam no Emulador
 
-O Expo está avisando que o pacote de áudio vai mudar no futuro.
-Solução: Pode ignorar por enquanto, o código atual funciona perfeitamente no SDK atual.
-
-📱 O GPS/Wi-Fi não funciona no Emulador
-
-O emulador do Android não tem GPS real nem Wi-Fi real.
+Causa: Limitação do Emulador.
 Solução:
 
-Para GPS: No emulador, clique nos ... > Location > Set Location.
+GPS: No emulador, vá em ... > Location e defina uma coordenada.
 
-Para Wi-Fi: Teste sempre no Dispositivo Físico para dados reais.
+Wi-Fi: O emulador simula uma rede genérica "AndroidWifi". Para ver o nome real do seu Wi-Fi, use um dispositivo físico.
 
-📦 Detalhe das Dependências
+⚠️ Erro de Permissão (Câmera/Galeria)
 
-Pacote
+Solução: Se o app fechar ou não salvar a foto, vá nas configurações do celular > Aplicativos > Expo Go > Permissões e garanta que tudo está permitido.
 
-Função Principal
-
-Tela Exemplo
-
-expo-av
-
-Áudio e Música
-
-Som.js
-
-expo-camera
-
-Fotos e Vídeo
-
-CameraScreen.js
-
-expo-location
-
-GPS e Geolocalização
-
-GpsScreen.js
-
-expo-sensors
-
-Acelerômetro/Giroscópio
-
-Acelerometro.js
-
-react-native-maps
-
-Mapas (Google/Apple)
-
-MapaScreen.js
-
-async-storage
-
-Salvar dados locais
-
-ListaScreen.js
-
-netinfo
-
-Monitorar Internet
-
-WifiScreen.js
-
-gesture-handler
-
-Toques complexos
-
-Pinch/Drag/Rotate
-
-reanimated
-
-Animações fluídas
-
-Todas de Gesto
-
-Desenvolvido com 💙 por [Seu Nome/Estudante SENAI]
+Desenvolvido para fins educacionais e demonstrativos.
